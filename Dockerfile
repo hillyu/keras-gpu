@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
+FROM tensorflow/tensorflow:1.13.1-gpu-py3-jupyter
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	    wget git  python3-sqlalchemy \
         python3-venv  \
