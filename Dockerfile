@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python3-venv  \
         libsm6 libxext6 libxrender-dev
          
-RUN pip install keras xlrd opencv-contrib-python mtcnn
+RUN pip install keras xlrd opencv-contrib-python mtcnn scikit-learn
 CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.password=$PASSWORD"]
-#CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root"]
 
